@@ -1,0 +1,28 @@
+# Ignore node modules and dependencies
+node_modules/
+npm-debug.log
+
+# Ignore Sass/CSS cache files
+.sass-cache/
+*.css.map
+
+# Ignore Tailwind CSS build artifacts
+public/css/tailwind.css
+public/css/tailwind.css.map
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore build artifacts
+dist/
+build/
