@@ -1,5 +1,5 @@
-<?php get_header() ?>
-<?php
+<? get_header() ?>
+<?
 while (have_posts()) {
     the_post(); ?>
     <div class="carousel w-full ">
@@ -28,12 +28,12 @@ while (have_posts()) {
                         <h2 class="card-title text-2xl"><?= the_title() ?></h2>
                         <p class="text-lg"><?= the_field('fecha') ?><br><?= the_field('hora') ?></p>
                         <ul class="text-lg">
-						<?php
-							while( have_rows('precios') ) : the_row();
-								$zona = get_sub_field('zona');
-								$precio = get_sub_field('precio'); ?>
-								<li><?= $zona ?>: <strong>RD$<?= number_format($precio) ?></strong></li>
-						<?php endwhile;  ?>
+                            <?
+                            while (have_rows('precios')) : the_row();
+                                $zona = get_sub_field('zona');
+                                $precio = get_sub_field('precio'); ?>
+                                <li><?= $zona ?>: <strong>RD$<?= number_format($precio) ?></strong></li>
+                            <? endwhile;  ?>
                         </ul>
                     </div>
                 </div>
@@ -68,5 +68,5 @@ while (have_posts()) {
         </div> -->
     </div>
     <!-- END of Content -->
-<?php } ?>
-<?php get_footer() ?>
+<? } ?>
+<? get_footer() ?>

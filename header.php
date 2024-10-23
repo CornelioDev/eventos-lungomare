@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= get_bloginfo('name') ?> | <? single_post_title() ?></title>
-    <?php wp_head() ?>
+    <? wp_head() ?>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
             <a class="btn btn-ghost text-xl" href="<?= site_url() ?>"><?= get_bloginfo('name') ?></a>
         </div>
         <!-- desktop menu -->
-        <?php
+        <?
         if (is_user_logged_in()) {
             // Menú para usuarios registrados
             wp_nav_menu([
@@ -31,7 +31,7 @@
                     </li>
                 </ul>
             </div>
-        <?php } ?>
+        <? } ?>
 
         <!-- mobile menu -->
         <div class="dropdown dropdown-end md:hidden">
@@ -40,14 +40,14 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                 </svg>
             </div>
-            <?php
+            <?
             // wp_nav_menu([
             //     'theme_location' => 'header-main-menu',
             //     'menu_class' => 'dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 text-neutral-700'
             // ])
             ?>
 
-            <?php
+            <?
             if (is_user_logged_in()) {
                 // Menú para usuarios registrados
                 wp_nav_menu([
@@ -63,7 +63,7 @@
                         </li>
                     </ul>
                 </div>
-            <?php } ?>
+            <? } ?>
         </div>
     </div>
     <!-- END of header -->
