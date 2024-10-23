@@ -1874,6 +1874,10 @@ html {
   height: 1.25rem;
 }
 
+.h-\[800px\] {
+  height: 800px;
+}
+
 .max-h-\[800px\] {
   max-height: 800px;
 }

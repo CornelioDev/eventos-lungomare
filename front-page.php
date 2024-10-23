@@ -23,12 +23,12 @@ $eventosBanner = [];
 if ($homePageEventos->have_posts()) {
     $count = 1;
 ?>
-    <div id="carousel" class="carousel w-full max-h-[800px]">
+    <div id="carousel" class="carousel w-full">
         <?
         while ($homePageEventos->have_posts()) {
             $homePageEventos->the_post(); ?>
             <div id="slide_<?= $count ?>" class="carousel-item <?= $count === 1 ? 'block' : 'hidden' ?> w-full">
-                <img src="<?= the_field('banner') ?>" class="mx-auto" />
+                <img src="<?= the_field('banner') ?>" class="mx-auto h-[800px]" />
             </div>
         <? $count++;
         } ?>
