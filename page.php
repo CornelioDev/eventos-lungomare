@@ -1,6 +1,6 @@
-<?php get_header() ?>
+<? get_header() ?>
 
-<?php
+<?
 while (have_posts()) {
     the_post(); ?>
 
@@ -9,6 +9,6 @@ while (have_posts()) {
         <?= the_content() ?>
     </div>
 
-<?php } ?>
+<? } ?>
 
-<?php get_footer() ?>
+<? get_footer() ?>
