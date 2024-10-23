@@ -3,7 +3,7 @@
 while (have_posts()) {
     the_post(); ?>
     <div class="carousel w-full ">
-        <img src="<?= the_field('banner') ?>" />
+        <img class="mx-auto" src="<?= the_field('banner') ?>" />
     </div>
 
     <!-- Content -->
@@ -13,9 +13,9 @@ while (have_posts()) {
                 <h2>Selecciona tu mesa</h2>
             </div>
             <div class="md:grid md:grid-cols-3">
-                <div class="text-center md:hidden">
+                <div class="text-center capitalize md:hidden">
                     <h1 class="font-bold text-3xl"><?= the_title() ?></h1>
-                    <p class="mb-3">Viernes 1ro de Marzo<br>Hora: 8:30PM</p>
+                    <p class="mb-3"><?= the_field('fecha') ?><br><?= the_field('hora') ?></p>
                     <h2 class="text-center font-black mb-3 uppercase">Selecciona tu mesa</h2>
                 </div>
 
@@ -24,13 +24,16 @@ while (have_posts()) {
                     <figure>
                         <img class="rounded-3xl" src="<?= the_post_thumbnail_url() ?>" alt="Shoes" />
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body capitalize">
                         <h2 class="card-title text-2xl"><?= the_title() ?></h2>
                         <p class="text-lg"><?= the_field('fecha') ?><br><?= the_field('hora') ?></p>
                         <ul class="text-lg">
-                            <li>Mesa Alta: <strong>RD$600</strong></li>
-                            <li>Silloes: <strong>RD$1,000</strong></li>
-                            <li>Terraza: <strong>RD$1,300</strong></li>
+						<?php
+							while( have_rows('precios') ) : the_row();
+								$zona = get_sub_field('zona');
+								$precio = get_sub_field('precio'); ?>
+								<li><?= $zona ?>: <strong>RD$<?= number_format($precio) ?></strong></li>
+						<?php endwhile;  ?>
                         </ul>
                     </div>
                 </div>

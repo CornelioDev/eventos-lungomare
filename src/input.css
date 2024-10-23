@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page-content {
+    @apply space-y-4;
+    & h1 {
+        @apply text-3xl font-semibold mb-3
+    }
+    & p {
+        @apply text-justify text-xl mb-3
+    }
+}
+
+.woocommerce-checkout {
+    & input {
+        @apply bg-white border rounded-md
+    }
+    & input[checkbox] {
+        @apply border-none
+    }
+    & input[submit] {
+        @apply border-none
+    }
+}
+
+input {
+    @apply bg-white border rounded-md
+}
+input[checkbox] {
+    @apply border-none
+}
+input[submit] {
+    @apply border-none
+}
+
+.order-details {
+    @apply text-xl;
+    & [data-column="Ticket"] {
+        @apply p-4
+    }
+}
+
+.woocommerce-MyAccount-navigation {
+    & ul {
+        @apply md:flex flex-col gap-5 my-2
+    }
+    & a:hover, :active {
+        @apply text-yellow-600 underline
+    }
+}
+
+.woocommerce-privacy-policy-text {
+    & p {
+        @apply text-sm
+    }
+}
+
+.cart_totals, .woocommerce-checkout-review-order-table {
+    & .cart-subtotal {
+        display: none;
+    }
+    & .woocommerce-shipping-totals {
+        display: none;
+    }
+    & h2 {
+        display: none;
+    }
+}

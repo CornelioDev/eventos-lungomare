@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos E&E</title>
+    <title><?= get_bloginfo('name') ?> | <? single_post_title() ?></title>
     <?php wp_head() ?>
 </head>
 
 <body>
     <div class="navbar bg-neutral-800 text-white">
         <div class="flex-1">
-            <a class="btn btn-ghost text-xl" href="<?= site_url() ?>">Eventos E&E</a>
+            <a class="btn btn-ghost text-xl" href="<?= site_url() ?>"><?= get_bloginfo('name') ?></a>
         </div>
         <!-- desktop menu -->
         <?php
@@ -27,7 +27,7 @@
             <div class="menu menu-horizontal px-1 hidden md:flex">
                 <ul>
                     <li class="menu-item">
-                        <a href="http://eventos.test/my-account/">Iniciar Sesión</a>
+                        <a href="<?= site_url('my-account') ?>">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
