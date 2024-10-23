@@ -67,3 +67,8 @@ input[submit] {
         display: none;
     }
 }
+
+.tc_seating_map_button{
+	background: rgb(38 38 38) !important;
+	color: white !important
+}
