@@ -1874,14 +1874,6 @@ html {
   height: 1.25rem;
 }
 
-.h-\[800px\] {
-  height: 800px;
-}
-
-.max-h-\[800px\] {
-  max-height: 800px;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -2213,6 +2205,11 @@ input[submit] {
   & h2 {
     display: none;
   }
+}
+
+.tc_seating_map_button{
+  background: rgb(38 38 38) !important;
+  color: white !important
 }
 
 .odd\:bg-slate-50:nth-child(odd) {
